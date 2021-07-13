@@ -1,20 +1,22 @@
 <template>
   <div id="app">
     <Nav />
-    <Main />
+    <!-- Bindo il main al data che mi serve, in questo caso l'array -->
+    <Main :comics = "comics" />  
     <Section />
     <FooterInfo />
     <FooterMedia />
   </div>
-  
+
 </template>
 
 <script>
-import Nav from './components/Nav.vue'
-import Main from "./components/Main.vue"
-import Section from "./components/Section.vue"
-import FooterInfo from "./components/FooterInfo.vue"
-import FooterMedia from "./components/FooterMedia.vue"
+import Nav from './components/Nav.vue';
+import Main from "./components/Main.vue";
+import Section from "./components/Section.vue";
+import FooterInfo from "./components/FooterInfo.vue";
+import FooterMedia from "./components/FooterMedia.vue";
+import ComicsData from "./jsons/dc-comics.json";
 
 export default {
   name: 'App',
@@ -24,6 +26,11 @@ export default {
     Section,
     FooterInfo,
     FooterMedia,
+  },
+  data: function() {
+    return {
+      comics: ComicsData,
+    }
   }
 }
 </script>

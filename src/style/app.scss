@@ -21,9 +21,7 @@ a {text-decoration: none;}
 main {
     background-color: black;
     color: white;
-    height: 100px;
     text-align: center;
-    line-height: 100px;
 }
 
 section {
@@ -39,4 +37,8 @@ section {
     background-color: #303030;
     height: 100px;
     line-height: 100px;
+}
+
+.col-2 {
+    width: calc(100% / 6);
 }
